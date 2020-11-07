@@ -2,7 +2,7 @@
 <?php include 'inc/connect.php' ?>
 <?php include 'inc/nav.php' ?>
 
-<div class="container">
+<div class="main__top container">
 <h2>Les Podcats de la Web & Radio!</h2>
 <!-- Portfolio Item Heading -->
   	<?php 

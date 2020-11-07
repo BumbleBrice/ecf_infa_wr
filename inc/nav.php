@@ -1,16 +1,29 @@
-<nav class="p-3 mb-2 bg-dark bg-gradient-dark d-flex justify-content-around">
-	<div class="w-25"><img class="w-25 img-fluid" src="img/avatar/avatar_default.png" alt=""></div>
-	<ul class="nav justify-content-center text-white">
-	  <li class="nav-item m-3">
-	    <a class="nav-link text-white" href="index.php">Accueil</a>
-	  </li>
-	  <li class="nav-item m-3">
-	    <a class="nav-link text-white btn btn-warning" href="registration.php">Inscription</a>
-	  </li>
-	  <li class="nav-item m-3">
-	    <a class="nav-link text-white btn btn-success" href="login.php" tabindex="-1" aria-disabled="true">Connexition</a>
-	  </li>
-	</ul>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img class="w-25 img-fluid" src="img/avatar/avatar_default.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto text-center">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Accueil
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 	

@@ -13,7 +13,7 @@
 		$news = $response->fetchAll(PDO::FETCH_ASSOC);
 		// l'opérateur de portée :: se nomme PAAMAYIM NEKUDOTAYIM
 	 ?>
-	<div class="container-fluid">	
+	<div class="main__top container-fluid">	
     	<div id="slideshow" class="slideshow">
 			<img class="img-fluid" src="img/slider/1.png">
 			<div class="button d-flex justify-content-center mt-3">
