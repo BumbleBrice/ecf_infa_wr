@@ -15,7 +15,7 @@ var_dump($_SESSION);?>
         <?php if (!empty($_SESSION) && isset($_SESSION['user']['role'])) {
 				if ($_SESSION['user']['role'] == 'admin') { ?>
 		<li class="nav-item">
-	       	<a class="nav-link btn bg-danger text-white mr-3" href="#">Admin</a>
+	       	<a class="nav-link btn bg-danger text-white mr-3" href="admin/">Admin</a>
 	    </li>
 		<?php
 				} 
