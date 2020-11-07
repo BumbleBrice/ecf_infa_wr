@@ -12,7 +12,6 @@
 		$response->execute();
 		$podcast = $response->fetchAll(PDO::FETCH_ASSOC);
 	 ?>
-	 <h4>Les dernières podcasts</h4>
 	 <ul class="list-group list-group-flush">
 	 <?php 
 	 	foreach ($podcast as $p) {  ?>
