@@ -68,14 +68,11 @@ class Slideshow{
     }
 }
 
-const path = 'https://bumbleweb.net/mlp/'
+const path = 'img/slider/'
 var slide = new Slideshow(
     'slideshow', 
-    [ path+"mlp1.jpg",
-      path+"mlp2.jpg",
-      path+"mlp3.jpg",
-      path+"mlp4.jpg",
-      path+"mlp5.jpg",
-      path+"mlp6.jpg",
-      path+"mlp7.jpg" ]
+    [ path+"1.png",
+      path+"2.png",
+      path+"3.png",
+      ]
 );

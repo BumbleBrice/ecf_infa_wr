@@ -13,9 +13,9 @@
 		$news = $response->fetchAll(PDO::FETCH_ASSOC);
 		// l'opérateur de portée :: se nomme PAAMAYIM NEKUDOTAYIM
 	 ?>
-	<div class="container">	
+	<div class="container-fluid">	
     	<div id="slideshow" class="slideshow">
-			<img src="https://bumbleweb.net/mlp/mlp1.jpg">
+			<img class="img-fluid" src="img/slider/1.png">
 			<div class="button d-flex justify-content-center mt-3">
 				<a href="#" class="prevBtn m-1">
 					<img src="img/slider/_controls/prev.svg" alt="">
@@ -38,11 +38,10 @@
 					?>
 					<div class="col mb-4">
 						<div class="card">
-							<a href="news.php?id=<?=$n['id']?>">
+							<a href="podcast.php?id=<?=$n['id']?>">
 					    		<img src="img/picture_file/default_picture.jpg" class="card-img-top" alt="...">
 					    		<div class="card-body">
-					      				<h5 class="card-title"><?= $n['title']?></h5>
-					      				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					      			<h5 class="card-title text-center text-uppercase"><?= $n['title']?></h5>	
 					    		</div>
 					    		<div class="card-footer">
 							      <small class="text-muted">Ajouter le : <?= strftime("%A %d %B %G à %Hh%M.%S", strtotime($n['date_add'])); ?></small>
