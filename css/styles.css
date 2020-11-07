@@ -1,6 +1,9 @@
 .main__top {
   margin-top: 10rem;
 }
+.dropdown-menu {
+  min-width: 20rem;
+}
 .slideshow {
   margin: auto;
   width: 100%;
