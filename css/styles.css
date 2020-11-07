@@ -1,0 +1,33 @@
+.slideshow {
+  margin: auto;
+  width: 450px;
+}
+  
+.slideshow > img {
+  display: block;
+  margin: auto;
+  border: solid 5px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  height: 85%;
+}
+
+.button {
+  width: 225px;
+  margin: auto;
+  font-size: 0;
+}
+
+.prevBtn img,
+.pauseBtn img,
+.playBtn img,
+.nextBtn img {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 10;
+  width: 75px;
+  height: 75px;
+}
+
+.button a:hover {
+  transform: scale(1.1);
+}
