@@ -1,3 +1,5 @@
+<?php session_start(); 
+var_dump($_SESSION);?>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
   <div class="container">
@@ -8,16 +10,16 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto text-center">
         <li class="nav-item active">
-          <a class="nav-link" href="index.php">Accueil
-           
-          </a>
+        	<a class="nav-link" href="index.php">Accueil</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn bg-danger text-white mr-3" href="#">Danger</a>
-        </li>
+        <?php if (!empty($_SESSION) && isset($_SESSION['user']['role'])) {
+				if ($_SESSION['user']['role'] == 'admin') { ?>
+		<li class="nav-item">
+	       	<a class="nav-link btn bg-danger text-white mr-3" href="#">Admin</a>
+	    </li>
+		<?php
+				} 
+			} else { ?>
         <li class="nav-item">
 			<form action="inc/login.php" method="POST">
 			<div class="dropdown mr-1">
@@ -50,6 +52,7 @@
 			</div>
 			</form>
         </li>
+        <?php	} ?>
       </ul>
     </div>
   </div>
