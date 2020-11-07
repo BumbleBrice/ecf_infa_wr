@@ -19,34 +19,36 @@
           <a class="nav-link btn bg-danger text-white mr-3" href="#">Danger</a>
         </li>
         <li class="nav-item">
-          <div class="dropdown mr-1">
-    <button type="button" class="btn btn-warning dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-expanded="false" data-offset="10,20">
-      Connexion
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-      	<li>
-	      	<a class="dropdown-item" href="#">
-	      		<div class="input-group mb-3">
-	  				<span class="input-group-text" id="basic-addon1">@</span>
-	  				<input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
-				</div>
-			</a>
-		</li>
-		<li>
-			<a class="dropdown-item" href="#">
-				<div class="input-group mb-3">
-	  				<span class="input-group-text" id="basic-addon1">&#128274;</span>
-	  				<input type="text" class="form-control" placeholder="Mot de passe" aria-label="Username" aria-describedby="basic-addon1">
-				</div>
-			</a>
-		</li>
-		<li>
-			<a class="dropdown-item" href="#">
-				<button type="submit" class="btn btn-dark">Connexion</button>
-			</a>
-		</li>
-    </ul>
-  </div>
+			<form action="inc/login.php" method="POST">
+			<div class="dropdown mr-1">
+			<button type="button" class="btn btn-warning dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-expanded="false" data-offset="10,20">
+			  Connexion
+			</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+				  	<li>
+				      	<a class="dropdown-item" href="#">
+				      		<div class="input-group mb-3">
+				  				<span class="input-group-text" id="basic-addon1">@</span>
+				  				<input type="text" name="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#">
+							<div class="input-group mb-3">
+				  				<span  class="input-group-text" id="basic-addon1">&#128274;</span>
+				  				<input type="password" name="password" class="form-control" placeholder="Mot de passe" aria-label="Username" aria-describedby="basic-addon1">
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#">
+							<button type="submit" class="btn btn-dark">Connexion</button>
+						</a>
+					</li>
+				</ul>
+			</div>
+			</form>
         </li>
       </ul>
     </div>
