@@ -17,13 +17,13 @@
     	<div id="slideshow" class="slideshow">
 			<img src="http://catox.free.fr/Divers/Tutos/Slideshowpics/spr1.png">
 			<div class="button d-flex justify-content-center">
-				<a href="#" class="prevBtn">
+				<a href="#" class="prevBtn m-1">
 					<img src="img/slider/red_controls/prev.svg" alt="">
 				</a>
-				<a href="#" class="pauseBtn">
+				<a href="#" class="pauseBtn m-1">
 					<img src="img/slider/red_controls/pause.svg" alt="">
 				</a>
-				<a href="#" class="nextBtn">
+				<a href="#" class="nextBtn m-1">
 					<img src="img/slider/red_controls/next.svg" alt="">
 				</a>
 			</div>
