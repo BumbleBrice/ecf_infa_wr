@@ -15,16 +15,16 @@
 	 ?>
 	<div class="container">	
     	<div id="slideshow" class="slideshow">
-			<img src="http://catox.free.fr/Divers/Tutos/Slideshowpics/spr1.png">
-			<div class="button d-flex justify-content-center">
+			<img src="https://bumbleweb.net/mlp/mlp1.jpg">
+			<div class="button d-flex justify-content-center mt-3">
 				<a href="#" class="prevBtn m-1">
-					<img src="img/slider/red_controls/prev.svg" alt="">
+					<img src="img/slider/_controls/prev.svg" alt="">
 				</a>
-				<a href="#" class="pauseBtn m-1">
-					<img src="img/slider/red_controls/pause.svg" alt="">
+				<a href="#" class="pauseBtn">
+					<img src="img/slider/_controls/pause.svg" alt="">
 				</a>
 				<a href="#" class="nextBtn m-1">
-					<img src="img/slider/red_controls/next.svg" alt="">
+					<img src="img/slider/_controls/next.svg" alt="">
 				</a>
 			</div>
 		</div>

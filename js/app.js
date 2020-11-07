@@ -60,10 +60,10 @@ class Slideshow{
         if (this.timer) {
             clearInterval(this.timer);
             this.timer = null;
-            this.domPause.className = "playBtn";
+            this.domPause.className = "playBtn m-1";
         } else {
             this.timer = setInterval(this.nextImage.bind(this), 2000);
-            this.domPause.className = "pauseBtn";
+            this.domPause.className = "pauseBtn m-1";
         }
     }
 }

@@ -17,15 +17,21 @@
   font-size: 0;
 }
 
-.prevBtn img,
-.pauseBtn img,
-.playBtn img,
-.nextBtn img {
+.prevBtn,
+.pauseBtn,
+.playBtn,
+.nextBtn {
   display: inline-block;
   cursor: pointer;
   z-index: 10;
   width: 75px;
+  height: 75px;
 }
+
+.prevBtn  { background: url(../img/slider/light_blue_controls/prev.svg)  no-repeat center; }
+.pauseBtn { background: url(../img/slider/light_blue_controls/pause.svg) no-repeat center; }
+.playBtn  { background: url(../img/slider/light_blue_controls/play.svg)  no-repeat center; }
+.nextBtn  { background: url(../img/slider/light_blue_controls/next.svg)  no-repeat center; }
 
 .button a:hover {
   transform: scale(1.1);
