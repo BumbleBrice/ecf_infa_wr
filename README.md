@@ -15,5 +15,5 @@
   </a> Réparer les bugs <br>
 <a href="https://www.mysql.com/" target="_blank"> 
     <img src="https://devicons.github.io/devicon/devicon.git/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/>
-  </a>  Importer la base de donnée dans phpmyadmin :volleyball:
+  </a>  Importer la base de donnée dans phpmyadmin
 
