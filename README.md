@@ -1,6 +1,6 @@
 # ecf_infa_wr
-Évaluation en cours de formation INFA Web et Radio 2020 Montalivet
-## Instruction :v  ❤️ I love writting code and reading about it
+### Évaluation en cours de formation INFA Web et Radio 2020 Montalivet
+## Instruction   ❤️ I love writting code and reading about it
 <a href="https://www.w3schools.com/css/" target="_blank">
   <img src="https://devicons.github.io/devicon/devicon.git/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
 </a> 
