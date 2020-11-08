@@ -58,6 +58,10 @@ if(!empty($_POST) && isset($_POST))
       }
     }
   }
+  else
+  {
+    $error[] = 'Vous devez selectionner une image';
+  }
 
   if(isset($_FILES['audio']))
   {
@@ -103,6 +107,10 @@ if(!empty($_POST) && isset($_POST))
         }
       }
     }
+  }
+  else
+  {
+    $error[] = 'Vous devez selectionner un son';
   }
 
   foreach ($_POST as $key => $value) 
