@@ -20,8 +20,8 @@
 	 				<?= $p['title']?>
 	 			</div>
 	 			<div class="text-uppercase">
-	 				<button class="text-uppercase btn btn-warning">midifier le podcast</button>
-	 				<button class="text-uppercase btn btn-danger">Supprimer le podcast</button>
+	 				<a href="edit_podcast.php?id=<?=$p['id']?>" class="text-uppercase btn btn-warning">midifier le podcast</a>
+	 				<a href="delete_podcast.php?id=<?=$p['id']?>" class="text-uppercase btn btn-danger" onClick="return confirm('ête vous sur de vouloir supprimer se podcast ?')">Supprimer le podcast</a>
 	 			</div>
 	 		</li>
 	 	<?php }  ?>

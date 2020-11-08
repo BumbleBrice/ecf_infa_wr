@@ -141,7 +141,7 @@ if(!empty($_POST) && isset($_POST))
     
     if($requete->execute()) 
     {
-      header('Location: news_list.php');
+      header('Location: /admin/');
     }
   }
 } 
