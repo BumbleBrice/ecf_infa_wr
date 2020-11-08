@@ -6,14 +6,14 @@
 </a> 
 <a href="https://www.w3.org/html/" target="_blank"> 
   <img src="https://devicons.github.io/devicon/devicon.git/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/>
-</a> ##Créer un design cohérent  <br>
+</a> ## Créer un design cohérent  <br>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
   <img src="https://devicons.github.io/devicon/devicon.git/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
-</a> ##réparer le slider <br>
+</a> ## Réparer le slider <br>
 <a href="https://www.php.net" target="_blank"> 
     <img src="https://devicons.github.io/devicon/devicon.git/icons/php/php-original.svg" alt="php" width="40" height="40"/>
-  </a>=> ##réparer les bugs <br>
+  </a> ## réparer les bugs <br>
 <a href="https://www.mysql.com/" target="_blank"> 
     <img src="https://devicons.github.io/devicon/devicon.git/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/>
-  </a>  => Importer la base de donnée dans phpmyadmin :volleyball:
-<h3 align="center">A passionate frontend developer from India</h3>
+  </a>  ## Importer la base de donnée dans phpmyadmin :volleyball:
+
