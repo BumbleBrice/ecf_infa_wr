@@ -6,7 +6,7 @@ require '../inc/connect.php';
 
 if(!isset($_SESSION['user']['role']) || $_SESSION['user']['role'] !== 'admin')
 {
-  header('Location: /');
+  header('Location: index.php');
 }
 
 
@@ -29,7 +29,7 @@ if(isset($_GET['id']))
 
   if($requete->execute()) 
   {
-    header('Location: /admin/');
+    header('Location: index.php');
   }
 }
 ?>

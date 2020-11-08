@@ -149,7 +149,7 @@ if(isset($_GET['id']))
       
       if($requete->execute())
       {
-        header('Location: admin/');
+        header('Location: index.php');
       }
       else
       {

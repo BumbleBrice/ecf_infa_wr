@@ -6,7 +6,7 @@
 
 	<div class="container">
 		
-	<p>Liste des Podcasts</p>
+	<h2 class="m-5">Liste des Podcasts</h2>
 	<?php 
 		$response = $bdd->query('SELECT * FROM podcasts ORDER BY ID DESC');
 		$response->execute();
@@ -19,6 +19,7 @@
 	 			<div class="text-uppercase">
 	 				<?= $p['title']?>
 	 			</div>
+	 			<div> <audio src="../<?= $p['sound_file'] ?>" controls></audio></div>
 	 			<div class="text-uppercase">
 	 				<a href="edit_podcast.php?id=<?=$p['id']?>" class="text-uppercase btn btn-warning">midifier le podcast</a>
 	 				<a href="delete_podcast.php?id=<?=$p['id']?>" class="text-uppercase btn btn-danger" onClick="return confirm('ête vous sur de vouloir supprimer se podcast ?')">Supprimer le podcast</a>

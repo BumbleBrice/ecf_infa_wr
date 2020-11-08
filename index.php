@@ -10,7 +10,7 @@
 		// On execute la requete
 		$response->execute();
 		// fetch retourne un tableau qui contient les données
-		$news = $response->fetchAll(PDO::FETCH_ASSOC);
+		$podcasts = $response->fetchAll(PDO::FETCH_ASSOC);
 		// l'opérateur de portée :: se nomme PAAMAYIM NEKUDOTAYIM
 	 ?>
 	<div class="main__top container-fluid">	
@@ -33,18 +33,18 @@
 		<h4 class="text-center m-5">Les podcasts</h4>
 		<div class="card-deck row row-cols-1 row-cols-md-3">
 			<?php 
-		 	foreach ($news as $n) {  // On crer une boucle et on crée un alis $n de $news
+		 	foreach ($podcasts as $p) {  // On crer une boucle et on crée un alis $n de $news
 		 		setlocale(LC_TIME, "fr_FR", "French"); // Permet de modifié les infos de localisation et de les traduires en français
 					?>
 					<div class="col mb-4">
 						<div class="card">
-							<a href="podcast.php?id=<?=$n['id']?>">
-					    		<img src="img/picture_file/default_picture.jpg" class="card-img-top" alt="...">
+							<a href="podcast.php?id=<?=$p['id']?>">
+					    		<img src="<?= $p['picture_file'] ?>" class="card-img-top" alt="...">
 					    		<div class="card-body">
-					      			<h5 class="card-title text-center text-uppercase"><?= $n['title']?></h5>	
+					      			<h5 class="card-title text-center text-uppercase"><?= $p['title']?></h5>	
 					    		</div>
 					    		<div class="card-footer">
-							      <small class="text-muted">Ajouter le : <?= strftime("%A %d %B %G à %Hh%M.%S", strtotime($n['date_add'])); ?></small>
+							      <small class="text-muted">Ajouter le : <?= strftime("%A %d %B %G à %Hh%M.%S", strtotime($p['date_add'])); ?></small>
 							    </div>
 		 					</a>
 						</div>

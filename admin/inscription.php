@@ -6,11 +6,11 @@
 
 	$showError = false;
 
-	$firstName = '';
-	$lastName = '';
+	$firstname = '';
+	$lastname = '';
 	$email = '';
 	$phone = '';
-	$adress = '';
+	$address = '';
 	$city = '';
 	$cityZip = '';
 
@@ -18,10 +18,10 @@
 		foreach ($_POST as $key => $value) {
 			$post[$key] = htmlspecialchars($value);
 		}
-		if (strlen($post['firstName']) <2 || strlen($post['firstName']) > 50) {
+		if (strlen($post['firstname']) <2 || strlen($post['firstname']) > 50) {
 			$errors[] = 'Le nom doit faire entre 2 et 50 caractères';
 		}
-		if (strlen($post['lastName']) <2 || strlen($post['lastName']) > 50) {
+		if (strlen($post['lastname']) <2 || strlen($post['lastname']) > 50) {
 			$errors[] = 'Le prénom doit faire entre 2 et 50 caractères';
 		}
 		if (strlen($post['phone']) != 10) {
@@ -30,7 +30,7 @@
 		if (!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
 			$errors[] = 'L\'email doit faire entre 2 et 50 caractères';
 		}
-		if (strlen($post['adress']) <2 || strlen($post['adress']) > 50) {
+		if (strlen($post['address']) <2 || strlen($post['address']) > 50) {
 			$errors[] = 'L\'addresse doit faire entre 2 et 50 caractères';
 		}
 		if (strlen($post['cityZip']) != 5) {
@@ -45,11 +45,11 @@
 		if (count($errors) > 0 ) {
 				$showError = true;
 
-				$firstName  = $post['firstName'];
-				$lastName 	= $post['lastName'];
+				$firstname  = $post['firstname'];
+				$lastname 	= $post['lastname'];
 				$email 		= $post['email'];
 				$phone 		= $post['phone'];
-				$adress 	= $post['adress'];
+				$address 	= $post['address'];
 				$city 		= $post['city'];
 				$cityZip 	= $post['cityZip'];
 				
@@ -57,18 +57,20 @@
 			$pass_hashed = password_hash($post['password'], PASSWORD_DEFAULT);
 
 			$requete = $bdd->prepare('INSERT INTO users 
-						(firstName, lastName, email, phone, adress, city, cityZip, password) 
-				VALUES 	(:firstName, :lastName, :email, :phone, :adress, :city, :cityZip, :password)');
-			$requete->bindValue(':firstName', 	$post['firstName'], PDO::PARAM_STR);
-			$requete->bindValue(':lastName', 	$post['lastName'], 	PDO::PARAM_STR);
+						(firstname, lastname, email, phone, address, city, cityZip, password) 
+				VALUES 	(:firstname, :lastname, :email, :phone, :address, :city, :cityZip, :password)');
+			$requete->bindValue(':firstname', 	$post['firstname'], PDO::PARAM_STR);
+			$requete->bindValue(':lastname', 	$post['lastname'], 	PDO::PARAM_STR);
 			$requete->bindValue(':email', 		$post['email'], 	PDO::PARAM_STR);
 			$requete->bindValue(':phone', 		$post['phone'], 	PDO::PARAM_STR);
-			$requete->bindValue(':adress', 		$post['adress'], 	PDO::PARAM_STR);
+			$requete->bindValue(':address', 		$post['address'], 	PDO::PARAM_STR);
 			$requete->bindValue(':city', 		$post['city'], 		PDO::PARAM_STR);
 			$requete->bindValue(':cityZip', 	$post['cityZip'], 	PDO::PARAM_STR);
 			$requete->bindValue(':password', 	$pass_hashed, 		PDO::PARAM_STR);
 			if ($requete->execute()) {
-				header('Location: index.php');
+				echo 'tout est bon';
+			} else {
+				echo 'moche';
 			}
 		} // fin du else
 	} // fin vérification $_POST
@@ -85,10 +87,10 @@
  	</ul>
  	<?php endif; ?>
  	<label for=""> Nom
-	 	<input type="text" name="firstName" value="<?=$firstName ?>">	
+	 	<input type="text" name="firstname" value="<?=$firstname ?>">	
  	</label><br>
  	<label for=""> Prénom
-	 	<input type="text" name="lastName" value="<?= $lastName ?>">
+	 	<input type="text" name="lastname" value="<?= $lastname ?>">
  	</label><br>
  	<label for=""> email
 	 	<input type="text" name="email" value="<?= $email ?>">	
@@ -96,8 +98,8 @@
  	<label for=""> Téléphone
 	 	<input type="text" name="phone" value="<?= $phone ?>">
  	</label><br>
- 	<label for=""> Adresse
-	 	<input type="text" name="adress" value="<?= $adress ?>">
+ 	<label for=""> addresse
+	 	<input type="text" name="address" value="<?= $address ?>">
  	</label><br>
  	<label for=""> Code postal
 	 	<input type="text" name="cityZip" value="<?= $cityZip ?>">

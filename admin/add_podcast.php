@@ -2,7 +2,7 @@
 <?php require '../inc/connect.php' ?>
 <?php require '../inc/session.php'; 
 	
-var_dump($_SESSION);
+
 $post = [];
 $error = array();
 $showError = false;
@@ -15,7 +15,7 @@ if(!empty($_POST) && isset($_POST))
   if(isset($_FILES['picture']) && $_FILES['picture']['name'] !== '')
   {
     // We put the name of the document in a variable
-    $document = '../img/picture_file/';
+    $document = 'img/picture_file/';
 
     $fichier = basename($_FILES['picture']['name']);
   
@@ -47,7 +47,7 @@ if(!empty($_POST) && isset($_POST))
       }
       else
       {
-        if(move_uploaded_file($_FILES['picture']['tmp_name'], $document.$modif_title)) // if there are no errors when the image moved the function return "true"
+        if(move_uploaded_file($_FILES['picture']['tmp_name'], '../' .$document.$modif_title)) // if there are no errors when the image moved the function return "true"
         {
           $picture = $document.$modif_title;
         }
@@ -66,7 +66,7 @@ if(!empty($_POST) && isset($_POST))
   if(isset($_FILES['audio']) && $_FILES['audio']['name'] !== '')
   {
     // We put the name of the document in a variable
-    $document = '../sound_file/';
+    $document = 'sound_file/';
 
     $fichier = basename($_FILES['audio']['name']);
   
@@ -97,7 +97,7 @@ if(!empty($_POST) && isset($_POST))
       }
       else
       {
-        if(move_uploaded_file($_FILES['audio']['tmp_name'], $document.$modif_title)) // if there are no errors when the image moved the function return "true"
+        if(move_uploaded_file($_FILES['audio']['tmp_name'], '../' .$document.$modif_title)) // if there are no errors when the image moved the function return "true"
         {
           $audio = $document.$modif_title;
         }
@@ -141,7 +141,7 @@ if(!empty($_POST) && isset($_POST))
     
     if($requete->execute()) 
     {
-      header('Location: /admin/');
+      header('Location: index.php');
     }
   }
 } 
