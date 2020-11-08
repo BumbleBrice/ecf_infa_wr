@@ -12,7 +12,7 @@ $content = '';
 
 if(!empty($_POST) && isset($_POST)) 
 {
-  if(isset($_FILES['picture']))
+  if(isset($_FILES['picture']) && $_FILES['picture']['name'] !== '')
   {
     // We put the name of the document in a variable
     $document = '../img/picture_file/';
@@ -58,8 +58,12 @@ if(!empty($_POST) && isset($_POST))
       }
     }
   }
+  else
+  {
+    $error[] = 'Vous devez selectionner une image';
+  }
 
-  if(isset($_FILES['audio']))
+  if(isset($_FILES['audio']) && $_FILES['audio']['name'] !== '')
   {
     // We put the name of the document in a variable
     $document = '../sound_file/';
@@ -103,6 +107,10 @@ if(!empty($_POST) && isset($_POST))
         }
       }
     }
+  }
+  else
+  {
+    $error[] = 'Vous devez selectionner un son';
   }
 
   foreach ($_POST as $key => $value) 

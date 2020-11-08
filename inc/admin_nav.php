@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link bg-info text-dark text-uppercase" href="add_news.php">Ajouter un podcast</a>
+          <a class="nav-link bg-info text-dark text-uppercase" href="add_podcast.php">Ajouter un podcast</a>
         </li>
       </ul>
     </div>
