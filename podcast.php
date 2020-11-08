@@ -17,6 +17,14 @@ if(isset($_GET['id']))
   {
     $podcast = $req->fetch(PDO::FETCH_ASSOC);
   }
+
+  $req = $bdd->prepare('SELECT * FROM commentaire WHERE podcast_id = :id');
+  $req->bindValue(':id', (int) $get['id']);
+
+  if($req->execute())
+  {
+    $commentaires = $req->fetchAll(PDO::FETCH_ASSOC);
+  }
 }
 else
 {
@@ -49,6 +57,24 @@ else
 
 </div>
 <!-- /.row -->
+
+<div class="row">
+  <h1>Les commentaires</h1>
+
+  <section>
+    <form action="add_commentaire.php" method="POST">
+      <input type="hidden" name="podcast_id" value="<?= $podcast['id'] ?>">
+      <input type="text" name="content">
+      <input type="submit" value="Envoyer">
+    </form>
+  </section>
+
+  <ul>
+    <?php foreach($commentaires as $commentaire): ?>
+      <li><?= $commentaire['author'] ?> : <?= $commentaire['content'] ?></li>
+    <?php endforeach; ?>
+  </ul>
+</div>
 
 </div>
 <?php include 'inc/footer.php' ?>
