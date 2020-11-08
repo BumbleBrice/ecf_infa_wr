@@ -1,60 +1,31 @@
-<?php   include '../inc/header.php';
-		include '../inc/connect.php';
-
-		$post = [];
-		$errors = array();
-
-		if (!empty($_POST) ) {
-			$post = array_map('htmlspecialchars', $_POST);
-			if (!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
-	
-				$errors[] = '@le couple identifiant et mot de passe ne correspond pas';
-			}
-			if (empty($post['password'])) {
-				$errors[] = 'le couple identifiant et mot de passe ne correspond pas';
-			}
-			if(count($errors) == 0 ) {
-				$reqEmail = $bdd->prepare('SELECT * from users WHERE email = :checkemail');
-				$reqEmail->bindValue(':checkemail', $post['email']);
-				if ($reqEmail->execute()) {
-					$user = $reqEmail->fetch(PDO::FETCH_ASSOC);
-					if (!empty($user)) {
-						if (password_verify($post['password'], $user['password'])) {
-							echo 'ça fonctionne !';
-							session_start();
-							$_SESSION['user'] = [
-								'firstName' => $user['firstName'],
-								'lastName'  => $user['lastName'],
-								'city' 		=> $user['city'],
-								'role' 		=> $user['role'],
-
-							];
-						} else {
-							$errors[] = 'mot de passe different';
-						}
-					} else {
-						$errors[] = 'Utilisateur introuvale';
-					}
-				} else {
-					$errors[] = 'fail execute';
-				}
-			}
-		}
-		if (count($errors) != 0) {
-			foreach ($errors as $key => $value) {
-				echo $value . '<br>';
-			}
-		}
+	<?php require '../inc/header.php' ?> <!-- On requière le fichier header.php qui se trouve dans le dossier inc -->
+	<?php require '../inc/connect.php' ?> <!-- idéme ligne du dessus -->
+	<?php require '../inc/session.php' ?> <!-- idéme ligne du dessus -->
+	<?php require '../inc/admin_nav.php' ?> <!-- idéme ligne du dessus -->
 
 
- ?>
+	<div class="container">
+		
+	<p>Liste des Podcasts</p>
+	<?php 
+		$response = $bdd->query('SELECT * FROM podcasts ORDER BY ID DESC');
+		$response->execute();
+		$podcast = $response->fetchAll(PDO::FETCH_ASSOC);
+	 ?>
+	 <ul class="list-group list-group-flush">
+	 <?php 
+	 	foreach ($podcast as $p) {  ?>
+	 		<li class="list-group-item d-flex justify-content-between">
+	 			<div class="text-uppercase">
+	 				<?= $p['title']?>
+	 			</div>
+	 			<div class="text-uppercase">
+	 				<button class="text-uppercase btn btn-warning">midifier le podcast</button>
+	 				<button class="text-uppercase btn btn-danger">Supprimer le podcast</button>
+	 			</div>
+	 		</li>
+	 	<?php }  ?>
+	 </ul>
 
-<form method="POST">
-	<label for=""> Votre email
-		<input type="text" name="email">
-	</label><br>
-	<label for=""> Votre mot de passe ultra top secret
-		<input type="password" name="password">
-	</label><br>
-	<input type="submit" value="Me connecter">
-</form>
+	</div>
+	<?php require '../inc/footer.php' ?>
