@@ -1,5 +1,4 @@
-<?php session_start(); 
-var_dump($_SESSION);?>
+<?php session_start(); ?>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
   <div class="container">

@@ -18,13 +18,13 @@
 			<img class="img-fluid" src="img/slider/1.png">
 			<div class="button d-flex justify-content-center mt-3">
 				<a href="#" class="prevBtn m-1">
-					<img src="img/slider/_controls/prev.svg" alt="">
+
 				</a>
 				<a href="#" class="pauseBtn">
-					<img src="img/slider/_controls/pause.svg" alt="">
+	
 				</a>
 				<a href="#" class="nextBtn m-1">
-					<img src="img/slider/_controls/next.svg" alt="">
+
 				</a>
 			</div>
 		</div>
