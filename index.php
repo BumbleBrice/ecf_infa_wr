@@ -33,7 +33,7 @@
 		<h4 class="text-center m-5">Les podcasts</h4>
 		<div class="card-deck row row-cols-1 row-cols-md-3">
 			<?php 
-		 	foreach ($podcasts as $p) {  // On crer une boucle et on crée un alis $n de $news
+		 	foreach ($podcasts as $p) {  // On crer une boucle et on crée un alis $p de $podcasts
 		 		setlocale(LC_TIME, "fr_FR", "French"); // Permet de modifié les infos de localisation et de les traduires en français
 					?>
 					<div class="col mb-4">
@@ -49,8 +49,7 @@
 		 					</a>
 						</div>
 					</div>
-		 	<?php }  ?>
-			
+		 	<?php }  ?>			
 		</div>
 	 
 	</div>

@@ -18,7 +18,6 @@ class Slideshow{
         this.domPrev.addEventListener('click', this.prevImage.bind(this));
         this.domNext.addEventListener('click', this.nextImage.bind(this));
         this.domPause.addEventListener('click', this.playPause.bind(this));
-      
         this.playPause();
     }
     
