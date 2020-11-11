@@ -15,23 +15,17 @@
 	 ?>
 	<div class="main__top container-fluid">	
     	<div id="slideshow" class="slideshow">
-			<img class="img-fluid" src="img/slider/1.png">
+			<img class="img-fluid" src="img/slider/1.png"></img>
 			<div class="button d-flex justify-content-center mt-3">
-				<a href="#" class="prevBtn m-1">
-
-				</a>
-				<a href="#" class="pauseBtn">
-	
-				</a>
-				<a href="#" class="nextBtn m-1">
-
-				</a>
+				<a href="#" class="prevBtn m-1"></a>
+				<a href="#" class="pauseBtn"></a>
+				<a href="#" class="nextBtn m-1"></a>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		<h4 class="text-center m-5">Les podcasts</h4>
-		<div class="card-deck row row-cols-1 row-cols-md-3">
+		<div class="card-deck row row-cols-1 row-cols-md-3 d-flex justify-content-center">
 			<?php 
 		 	foreach ($podcasts as $p) {  // On crer une boucle et on crée un alis $p de $podcasts
 		 		setlocale(LC_TIME, "fr_FR", "French"); // Permet de modifié les infos de localisation et de les traduires en français

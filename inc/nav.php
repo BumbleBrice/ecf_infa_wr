@@ -22,7 +22,7 @@
         <li class="nav-item">
 			<form action="inc/login.php" method="POST">
 			<div class="dropdown mr-1">
-			<button type="button" class="btn btn-warning dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-expanded="false" data-offset="10,20">
+			<button type="button" class="btn btn-warning dropdown-toggle p-2" id="dropdownMenuOffset" data-toggle="dropdown" aria-expanded="false" data-offset="10,20">
 			  Connexion
 			</button>
 				<ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
@@ -51,6 +51,9 @@
 			</div>
 			</form>
         </li>
+        <li class="nav-item">
+	       	<a class="nav-link btn bg-success text-white mr-3" href="admin/inscription.php">Inscription</a>
+	    </li>
         <?php	} ?>
       </ul>
     </div>
